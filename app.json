@@ -1,5 +1,5 @@
 {
-  "name": "fugapiyo-microposts",
+  "name": "fugapiyo-monolist",
   "scripts": {
     "postdeploy": "bundle exec rake db:setup"
   }
