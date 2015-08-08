@@ -19,6 +19,10 @@
           </p>
         </div>
         <div class="action clearfix">
+          <% if registerd_item=Item.find_by(asin: item.get('ASIN')) %>
+            <% item = registerd_item %>
+            <%= render 'items/action' , item: item if logged_in? %>
+          <% else %>
           <%= link_to "" , ownerships_path(asin: item.get('ASIN') , type: "Want") ,
                       :class => "want-#{item.get('ASIN')} btn-want btn btn-danger btn-sm want",
                       :remote => true,
@@ -27,6 +31,7 @@
                       :class => "have-#{item.get('ASIN')} btn-have btn btn-warning btn-sm have",
                       :remote => true,
                       :method => :post %>
+          <% end %>
         </div>
       </div>
     <% end %>
