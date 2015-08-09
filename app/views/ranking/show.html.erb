@@ -1,0 +1,7 @@
+<% content_for :item_view_show_title do %>
+   ランキング（<%= @rank_mode %>） - Monolist
+<% end %>
+<% content_for :item_view_show_meta do %>
+  <meta name="description" content="人気のある商品をランキング形式で表示しています。" />
+<% end %>
+<%= render 'items/list' , items: @items if logged_in? %>

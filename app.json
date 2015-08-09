@@ -2,5 +2,16 @@
   "name": "fugapiyo-monolist",
   "scripts": {
     "postdeploy": "bundle exec rake db:setup"
+  },
+  "env": {
+    "ASSOCIATE_TAG": {
+      "description": "Amazon Associate Tag"
+    },
+    "AWS_ACCESS_KEY_ID": {
+      "description": "AWS Access Key"
+    },
+    "AWS_SECRET_KEY": {
+      "description": "AWS Secret Key"
+    }
   }
 }

@@ -1,0 +1,6 @@
+<div class="detail">
+  <h4>
+    <% method_name = "#{@rank_mode.downcase}_users".to_sym %>
+    <%= "#{index+1}位（#{item.send(method_name).count}pts.）" %>
+  </h4>
+</div>
