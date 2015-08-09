@@ -15,7 +15,14 @@ class UsersController < ApplicationController
   end
   
   def show
-    @items = @user.items
+    @items = @user.items.uniq
+    puts "--------------------------------"
+    Item.all.each do |item| 
+      item.have_users.each do |user|
+        puts user.id
+      end
+    end
+    puts "--------------------------------"
   end
 
   private

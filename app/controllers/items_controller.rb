@@ -13,6 +13,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    set_item
   end
 
   private
